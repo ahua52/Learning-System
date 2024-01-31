@@ -52,21 +52,19 @@ const HOME_PERMISSION = {
   parentId: '',
   label: 'sys.menu.home',
   name: 'Home',
-  icon: 'ic-analysis',
   type: PermissionType.MENU,
   route: 'home',
   component: '/dashboard/workbench/index.tsx',
   order: 1,
 };
-const MANAGEMENT_PERMISSION = {
+const ABOUT_PERMISSION = {
   id: '0901673425580518',
   parentId: '',
-  label: 'sys.menu.management',
+  label: 'sys.menu.about',
   name: 'Management',
-  icon: 'ic-management',
   type: PermissionType.MENU,
-  route: 'management',
-  component: '/management/user/profile/index.tsx',
+  route: 'about',
+  component: '/management/index.tsx',
   order: 2
 };
 const COMPONENTS_PERMISSION = {
@@ -74,7 +72,6 @@ const COMPONENTS_PERMISSION = {
   parentId: '',
   label: 'sys.menu.components',
   name: 'Components',
-  icon: 'solar:widget-5-bold-duotone',
   type: PermissionType.CATALOGUE,
   route: 'components',
   order: 3,
@@ -153,69 +150,142 @@ const COMPONENTS_PERMISSION = {
     },
   ],
 };
-const FUNCTIONS_PERMISSION = {
+const EFATEAM_PERMISSION = {
   id: '8132044808088488',
   parentId: '',
-  label: 'sys.menu.functions',
-  name: 'functions',
-  icon: 'solar:plain-2-bold-duotone',
+  label: 'sys.menu.efateam',
+  name: 'efateam',
   type: PermissionType.MENU,
-  route: 'functions',
+  route: 'efateam',
   order: 4,
   component: '/functions/clipboard/index.tsx',
 };
-const MENU_LEVEL_PERMISSION = {
+const Activities_PERMISSION = {
   id: '0194818428516575',
   parentId: '',
-  label: 'sys.menu.menulevel.index',
-  name: 'Menu Level',
-  icon: 'ic-menulevel',
+  label: 'sys.menu.activities',
+  name: 'Activities',
   type: PermissionType.MENU,
-  route: 'menu-level',
-  component: '/menu-level/menu-level-1a/index.tsx',
+  route: 'activities',
+  component: '/menu-level/index.tsx',
   order: 5,
+};
+const MANAGEMENT_PERMISSION = {
+  id: '0901673425580518',
+  parentId: '',
+  label: 'sys.menu.management',
+  name: 'Management',
+  hide: true,
+  icon: 'ic-management',
+  type: PermissionType.CATALOGUE,
+  route: 'management',
+  order: 2,
+  children: [
+    {
+      id: '2781684678535711',
+      parentId: '0901673425580518',
+      label: 'sys.menu.user.index',
+      name: 'User',
+      type: PermissionType.CATALOGUE,
+      route: 'user',
+      children: [
+        {
+          id: '4754063958766648',
+          parentId: '2781684678535711',
+          label: 'sys.menu.user.profile',
+          name: 'Profile',
+          type: PermissionType.MENU,
+          route: 'profile',
+          component: '/management/user/profile/index.tsx',
+        },
+        {
+          id: '2516598794787938',
+          parentId: '2781684678535711',
+          label: 'sys.menu.user.account',
+          name: 'Account',
+          type: PermissionType.MENU,
+          route: 'account',
+          component: '/management/user/account/index.tsx',
+        },
+      ],
+    },
+    {
+      id: '0249937641030250',
+      parentId: '0901673425580518',
+      label: 'sys.menu.system.index',
+      name: 'System',
+      type: PermissionType.CATALOGUE,
+      route: 'system',
+      children: [
+        {
+          id: '1985890042972842',
+          parentId: '0249937641030250',
+          label: 'sys.menu.system.organization',
+          name: 'Organization',
+          type: PermissionType.MENU,
+          route: 'organization',
+          component: '/management/system/organization/index.tsx',
+        },
+        {
+          id: '4359580910369984',
+          parentId: '0249937641030250',
+          label: 'sys.menu.system.permission',
+          name: 'Permission',
+          type: PermissionType.MENU,
+          route: 'permission',
+          component: '/management/system/permission/index.tsx',
+        },
+        {
+          id: '1689241785490759',
+          parentId: '0249937641030250',
+          label: 'sys.menu.system.role',
+          name: 'Role',
+          type: PermissionType.MENU,
+          route: 'role',
+          component: '/management/system/role/index.tsx',
+        },
+        {
+          id: '0157880245365433',
+          parentId: '0249937641030250',
+          label: 'sys.menu.system.user',
+          name: 'User',
+          type: PermissionType.MENU,
+          route: 'user',
+          component: '/management/system/user/index.tsx',
+        },
+      ],
+    },
+  ],
 };
 const OTHERS_PERMISSION = [
   {
     id: '3981225257359246',
     parentId: '',
-    label: 'sys.menu.calendar',
-    name: 'Calendar',
-    icon: 'solar:calendar-bold-duotone',
+    label: 'sys.menu.apply',
+    name: 'Apply',
     type: PermissionType.MENU,
-    route: 'calendar',
+    route: 'apply',
     component: '/sys/others/calendar/index.tsx',
   },
-  // {
-  //   id: '5455837930804461',
-  //   parentId: '',
-  //   label: 'sys.menu.disabled',
-  //   name: 'Disabled',
-  //   icon: 'ic_disabled',
-  //   type: PermissionType.MENU,
-  //   route: 'disabled',
-  //   status: BasicStatus.DISABLE,
-  //   component: '/sys/others/calendar/index.tsx',
-  // },
   {
     id: '7728048658221587',
     parentId: '',
-    label: 'sys.menu.label',
-    name: 'Label',
-    icon: 'ic_label',
+    label: 'sys.menu.contact',
+    name: 'Contact',
     type: PermissionType.MENU,  // tag new feature
-    route: 'label',
-    newFeature: true,
+    route: 'contact',
+    // newFeature: true,
     component: '/sys/others/blank.tsx',
   }
 ];
 
 export const PERMISSION_LIST = [
   HOME_PERMISSION,
-  MANAGEMENT_PERMISSION,
+  ABOUT_PERMISSION,
   COMPONENTS_PERMISSION,
-  FUNCTIONS_PERMISSION,
-  MENU_LEVEL_PERMISSION,
+  EFATEAM_PERMISSION,
+  Activities_PERMISSION,
+  MANAGEMENT_PERMISSION,
   ...OTHERS_PERMISSION,
 ];
 
@@ -238,7 +308,7 @@ const TEST_ROLE = {
   status: BasicStatus.ENABLE,
   order: 2,
   desc: 'test',
-  permission: [HOME_PERMISSION, COMPONENTS_PERMISSION, FUNCTIONS_PERMISSION],
+  permission: [HOME_PERMISSION, COMPONENTS_PERMISSION, EFATEAM_PERMISSION],
 };
 export const ROLE_LIST = [ADMIN_ROLE, TEST_ROLE];
 

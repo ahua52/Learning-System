@@ -12,14 +12,13 @@ const AccountPage = lazy(() => import('@/pages/management/user/account'));
 const OrganizationPage = lazy(() => import('@/pages/management/system/organization'));
 const PermissioPage = lazy(() => import('@/pages/management/system/permission'));
 
-const Blog = lazy(() => import('@/pages/management/blog'));
 
 const management: AppRouteObject = {
   order: 2,
   path: 'management',
   element: (
     <Suspense fallback={<CircleLoading />}>
-      <ProfilePage />
+      <Outlet />
     </Suspense>
   ),
   meta: {
@@ -30,11 +29,11 @@ const management: AppRouteObject = {
   children: [
     {
       index: true,
-      element: <ProfilePage />,
+      element: <Navigate to="user" replace />,
     },
     {
       path: 'user',
-      meta: { label: 'sys.menu.user.index', key: '/management/user/profile' },
+      meta: { label: 'sys.menu.user.index', key: '/management/user' },
       children: [
         {
           index: true,
@@ -67,12 +66,7 @@ const management: AppRouteObject = {
           meta: { label: 'sys.menu.system.permission', key: '/management/system/permission' },
         },
       ],
-    },
-    {
-      path: 'blog',
-      element: <Blog />,
-      meta: { label: 'sys.menu.blog', key: '/management/blog' },
-    },
+    }
   ],
 };
 

@@ -1,125 +1,112 @@
 import { Suspense, lazy } from 'react';
 
-import Card from '@/components/card';
-import { Iconify, SvgIcon } from '@/components/icon';
+import { Outlet } from 'react-router-dom';
+import { SvgIcon } from '@/components/icon';
+
+import { Iconify } from '@/components/icon';
 import { CircleLoading } from '@/components/loading';
-import ProTag from '@/theme/antd/components/tag';
 
 import { AppRouteObject } from '#/router';
 
-const ExternalLink = lazy(() => import('@/pages/sys/others/iframe/external-link'));
-const Iframe = lazy(() => import('@/pages/sys/others/iframe'));
+const HomePage = lazy(() => import(`@/pages/dashboard/workbench`));
 const Calendar = lazy(() => import('@/pages/sys/others/calendar'));
-const Kanban = lazy(() => import('@/pages/sys/others/kanban'));
+// const ProfilePage = lazy(() => import('@/pages/management/user/profile'));
 
 function Wrapper({ children }: any) {
   return <Suspense fallback={<CircleLoading />}>{children}</Suspense>;
 }
 const others: AppRouteObject[] = [
   {
-    path: 'calendar',
+    // order: 1,
+    path: 'home',
+    element: (
+      <Suspense fallback={<CircleLoading />}>
+        <HomePage />
+      </Suspense>
+    ),
+    meta: {
+      label: 'sys.menu.home',
+      key: '/home'
+    }
+  },
+  {
+    order: 2,
+    path: 'about',
+    element: (
+      <Suspense fallback={<CircleLoading />}>
+        <Outlet />
+      </Suspense>
+    ),
+    meta: {
+      label: 'sys.menu.about',
+      key: '/about',
+    }
+  },
+  {
+    order: 4,
+    path: 'efateam',
+    element: (
+      <Suspense fallback={<CircleLoading />}>
+        <Outlet />
+      </Suspense>
+    ),
+    meta: {
+      label: 'sys.menu.efateam',
+      key: '/efateam',
+    }
+  },
+  {
+    order: 5,
+    path: 'menu_level',
+    element: (
+      <Suspense fallback={<CircleLoading />}>
+        <Outlet />
+      </Suspense>
+    ),
+    meta: {
+      label: 'sys.menu.activities',
+      icon: <SvgIcon icon="ic-menulevel" className="ant-menu-item-icon" size="24" />,
+      key: '/activities',
+    }
+  },
+  {
+    path: 'apply',
     element: (
       <Wrapper>
         <Calendar />
       </Wrapper>
     ),
     meta: {
-      label: 'sys.menu.calendar',
+      label: 'sys.menu.apply',
       icon: <Iconify icon="solar:calendar-bold-duotone" size={24} />,
-      key: '/calendar',
+      key: '/apply',
     },
   },
   {
-    path: 'kanban',
+    path: 'contact',
     element: (
       <Wrapper>
-        <Kanban />
+        <div >contact</div>
       </Wrapper>
     ),
     meta: {
-      label: 'sys.menu.kanban',
-      icon: <Iconify icon="solar:clipboard-bold-duotone" size={24} />,
-      key: '/kanban',
+      label: 'sys.menu.contact',
+      key: '/contact',
     },
   },
   {
+    path: 'contact',
     element: (
       <Wrapper>
-        <div />
+        <div >contact</div>
       </Wrapper>
     ),
     meta: {
-      label: 'sys.menu.disabled',
-      icon: <SvgIcon icon="ic_disabled" className="ant-menu-item-icon" size="24" />,
-      disabled: true,
-      key: '/disabled',
+      label: 'sys.menu.contact',
+      key: '/contact',
     },
-  },
-  {
-    path: 'label',
-    element: (
-      <Wrapper>
-        <div />
-      </Wrapper>
-    ),
-    meta: {
-      label: 'sys.menu.label',
-      icon: <SvgIcon icon="ic_label" className="ant-menu-item-icon" size="24" />,
-      suffix: (
-        <ProTag color="cyan" icon={<Iconify icon="solar:bell-bing-bold-duotone" size={14} />}>
-          NEW
-        </ProTag>
-      ),
-      key: '/label',
-    },
-  },
-  {
-    path: 'frame',
-    meta: {
-      label: 'sys.menu.frame',
-      icon: <SvgIcon icon="ic_external" className="ant-menu-item-icon" size="24" />,
-      key: '/frame',
-    },
-    children: [
-      {
-        path: 'external_link',
-        element: (
-          <Wrapper>
-            <ExternalLink src="https://ant.design/index-cn" />
-          </Wrapper>
-        ),
-        meta: {
-          label: 'sys.menu.external_link',
-          key: '/frame/external_link',
-        },
-      },
-      {
-        path: 'iframe',
-        element: (
-          <Wrapper>
-            <Iframe src="https://ant.design/index-cn" />
-          </Wrapper>
-        ),
-        meta: {
-          label: 'sys.menu.iframe',
-          key: '/frame/iframe',
-        },
-      },
-    ],
-  },
-  {
-    path: 'blank',
-    element: (
-      <Wrapper>
-        <Card />
-      </Wrapper>
-    ),
-    meta: {
-      label: 'sys.menu.blank',
-      icon: <SvgIcon icon="ic_blank" className="ant-menu-item-icon" size="24" />,
-      key: '/blank',
-    },
-  },
+  }
+  
 ];
 
 export default others;
