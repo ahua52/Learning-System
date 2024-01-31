@@ -83,8 +83,7 @@
       "closeRight": "Close Right"
     },
     "menu": {
-      "dashboard": "Dashboard",
-      "workbench": "Workbench",
+      "home": "Home",
       "analysis": "Analysis",
       "management": "Management",
       "user": {

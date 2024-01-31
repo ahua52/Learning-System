@@ -57,7 +57,7 @@ export default function AccountDropdown() {
   );
 
   const items: MenuProps['items'] = [
-    { label: <NavLink to={HOMEPAGE}>{t('sys.menu.dashboard')}</NavLink>, key: '0' },
+    { label: <NavLink to={HOMEPAGE}>{t('sys.menu.home')}</NavLink>, key: '0' },
     {
       label: <NavLink to="/management/user/profile">{t('sys.menu.user.profile')}</NavLink>,
       key: '1',

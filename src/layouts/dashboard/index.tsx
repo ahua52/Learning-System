@@ -10,7 +10,6 @@ import { useThemeToken } from '@/theme/hooks';
 import Header from './header';
 import Main from './main';
 import Nav from './nav';
-import NavHorizontal from './nav-horizontal';
 
 import { ThemeLayout, ThemeMode } from '#/enum';
 
@@ -51,7 +50,6 @@ function DashboardLayout() {
   const horizontalLayout = (
     <div className="relative flex flex-1 flex-col">
       <Header />
-      <NavHorizontal />
       <Main ref={mainEl} offsetTop={offsetTop} />
     </div>
   );

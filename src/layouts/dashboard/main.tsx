@@ -40,7 +40,8 @@ const Main = forwardRef<HTMLDivElement, Props>(({ offsetTop = false }, ref) => {
           themeStretch ? '' : 'xl:max-w-screen-xl'
         }`}
       >
-        {multiTab ? <MultiTabs offsetTop={offsetTop} /> : <Outlet />}
+         <Outlet />
+        {/* {multiTab ? <MultiTabs offsetTop={offsetTop} /> : <Outlet />} */}
       </div>
     </Content>
   );

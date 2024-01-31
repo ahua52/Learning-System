@@ -19,7 +19,7 @@ const management: AppRouteObject = {
   path: 'management',
   element: (
     <Suspense fallback={<CircleLoading />}>
-      <Outlet />
+      <ProfilePage />
     </Suspense>
   ),
   meta: {
@@ -30,11 +30,11 @@ const management: AppRouteObject = {
   children: [
     {
       index: true,
-      element: <Navigate to="user" replace />,
+      element: <ProfilePage />,
     },
     {
       path: 'user',
-      meta: { label: 'sys.menu.user.index', key: '/management/user' },
+      meta: { label: 'sys.menu.user.index', key: '/management/user/profile' },
       children: [
         {
           index: true,

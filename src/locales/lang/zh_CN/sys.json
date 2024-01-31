@@ -82,7 +82,7 @@
       "closeRight": "关闭右侧标签页"
     },
     "menu": {
-      "dashboard": "仪表",
+      "home": "仪表",
       "workbench": "工作台",
       "analysis": "分析",
       "management": "管理",

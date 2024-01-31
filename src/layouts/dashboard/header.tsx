@@ -3,16 +3,17 @@ import Color from 'color';
 import { CSSProperties, useState } from 'react';
 
 import { IconButton, Iconify, SvgIcon } from '@/components/icon';
-import LocalePicker from '@/components/locale-picker';
+// import LocalePicker from '@/components/locale-picker';
 import Logo from '@/components/logo';
 import { useSettings } from '@/store/settingStore';
 import { useResponsive, useThemeToken } from '@/theme/hooks';
 
 import AccountDropdown from '../_common/account-dropdown';
-import BreadCrumb from '../_common/bread-crumb';
-import NoticeButton from '../_common/notice';
+// import BreadCrumb from '../_common/bread-crumb';
+// import NoticeButton from '../_common/notice';
 import SearchBar from '../_common/search-bar';
-import SettingButton from '../_common/setting-button';
+// import SettingButton from '../_common/setting-button';
+import NavHorizontal from './nav-horizontal';
 
 import { NAV_COLLAPSED_WIDTH, NAV_WIDTH, HEADER_HEIGHT, OFFSET_HEADER_HEIGHT } from './config';
 import Nav from './nav';
@@ -68,17 +69,17 @@ export default function Header({ className = '', offsetTop = false }: Props) {
             ) : (
               <Logo className="mr-2 text-xl" />
             )}
-            <div className="hidden md:block">{breadCrumb ? <BreadCrumb /> : null}</div>
+            {/* <div className="hidden md:block">{breadCrumb ? <BreadCrumb /> : null}</div> */}
           </div>
-
+          <NavHorizontal />
           <div className="flex">
             <SearchBar />
-            <LocalePicker />
-            <IconButton onClick={() => window.open('https://github.com/d3george/slash-admin')}>
+            {/* <LocalePicker /> */}
+            {/* <IconButton onClick={() => window.open('https://github.com/d3george/slash-admin')}>
               <Iconify icon="mdi:github" size={24} />
-            </IconButton>
-            <NoticeButton />
-            <SettingButton />
+            </IconButton> */}
+            {/* <NoticeButton /> */}
+            {/* <SettingButton /> */}
             <AccountDropdown />
           </div>
         </div>

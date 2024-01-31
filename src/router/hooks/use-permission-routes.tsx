@@ -25,13 +25,14 @@ function resolveComponent(path: string) {
  */
 export function usePermissionRoutes() {
   const permissions = useUserPermission();
-
   return useMemo(() => {
     const flattenedPermissions = flattenTrees(permissions!);
+    
     const permissionRoutes = transformPermissionToMenuRoutes(
       permissions || [],
       flattenedPermissions,
     );
+    
     return [...permissionRoutes];
   }, [permissions]);
 }

@@ -25,7 +25,7 @@ const useSettingStore = create<SettingStore>((set) => ({
   settings: getItem<SettingsType>(StorageEnum.Settings) || {
     themeColorPresets: ThemeColorPresets.Default,
     themeMode: ThemeMode.Light,
-    themeLayout: ThemeLayout.Vertical,
+    themeLayout: ThemeLayout.Horizontal,
     themeStretch: false,
     breadCrumb: true,
     multiTab: true,
