@@ -12,6 +12,7 @@ import AccountDropdown from '../_common/account-dropdown';
 // import BreadCrumb from '../_common/bread-crumb';
 // import NoticeButton from '../_common/notice';
 import SearchBar from '../_common/search-bar';
+import HeaderSearch from './headerSearch';
 // import SettingButton from '../_common/setting-button';
 import NavHorizontal from './nav-horizontal';
 
@@ -34,7 +35,7 @@ export default function Header({ className = '', offsetTop = false }: Props) {
     position: themeLayout === ThemeLayout.Horizontal ? 'relative' : 'fixed',
     borderBottom:
       themeLayout === ThemeLayout.Horizontal
-        ? `1px dashed ${Color(colorBorder).alpha(0.6).toString()}`
+        ? `1px solid ${Color(colorBorder).alpha(0.6).toString()}`
         : '',
     backgroundColor: Color(colorBgElevated).alpha(1).toString(),
   };
@@ -73,7 +74,29 @@ export default function Header({ className = '', offsetTop = false }: Props) {
           </div>
           <NavHorizontal />
           <div className="flex">
-            <SearchBar />
+          <HeaderSearch
+              // className={`${classes.action} ${classes.search}`}
+              placeholder="站内搜索"
+              defaultValue="Ant Design"
+              options={[
+                {
+                  label: <a href="next.ant.design">Ant Design</a>,
+                  value: "Ant Design",
+                },
+                {
+                  label: <a href="https://protable.ant.design/">Pro Table</a>,
+                  value: "Pro Table",
+                },
+                {
+                  label: <a href="https://prolayout.ant.design/">Pro Layout</a>,
+                  value: "Pro Layout",
+                },
+              ]}
+              onSearch={value => {
+                console.log('input', value);
+              }}
+            />
+            {/* <SearchBar /> */}
             {/* <LocalePicker /> */}
             {/* <IconButton onClick={() => window.open('https://github.com/d3george/slash-admin')}>
               <Iconify icon="mdi:github" size={24} />

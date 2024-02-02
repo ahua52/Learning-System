@@ -1,15 +1,11 @@
 import { NavLink } from 'react-router-dom';
 
-import { useThemeToken } from '@/theme/hooks';
+import logoimg from '@/assets/images/background/logo.jpg';
 
 function Logo({ className = '' }: { className?: string }) {
-  const { colorPrimary } = useThemeToken();
-
   return (
-    <NavLink to="/" className="no-underline">
-      <button className={`font-semibold ${className}`} style={{ color: colorPrimary }}>
-        Logo
-      </button>
+    <NavLink to="/" className="no-underline custom-logo-link" rel="home">
+      <img width="90" height="16" src={logoimg}/>
     </NavLink>
   );
 }

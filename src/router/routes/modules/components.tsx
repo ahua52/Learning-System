@@ -17,16 +17,16 @@ const ChartPage = lazy(() => import('@/pages/components/chart'));
 
 const components: AppRouteObject = {
   order: 3,
-  path: 'components',
+  path: 'classes',
   element: (
     <Suspense fallback={<CircleLoading />}>
       <Outlet />
     </Suspense>
   ),
   meta: {
-    label: 'sys.menu.components',
+    label: 'sys.menu.class',
     icon: <Iconify icon="solar:widget-5-bold-duotone" className="ant-menu-item-icon" size="24" />,
-    key: '/components',
+    key: '/classes',
   },
   children: [
     {

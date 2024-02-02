@@ -1,0 +1,35 @@
+.main-content {
+  font-family: Roboto, sans-serif;
+  h1 {
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.4em;
+  }
+  h2 {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin-bottom: 0.7em;
+  }
+  h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 1.6em;
+  }
+  .elementor-widget-text-editor {
+    color: rgb(122, 122, 122);
+  }
+  .home-content {
+    width: 90%;
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+  
+}

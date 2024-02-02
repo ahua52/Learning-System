@@ -1,0 +1,56 @@
+
+.headerSearch {
+  display: inline-flex;
+  align-items: center;
+  .input {
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 0;
+    transition: width 0.3s, margin-left 0.3s;
+    :global(.ant-select-selection) {
+      background: transparent;
+    }
+    input {
+      box-shadow: none !important;
+    }
+    &:hover {
+      background: transparent!important;
+    }
+    &.show {
+      width: 210px;
+      margin-left: 8px;
+    }
+  }
+}
+.header-menu {
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  .ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected::after, .ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected::after {
+    border: none !important;
+  }
+  .ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after, .ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after, .ant-menu-light.ant-menu-horizontal >.ant-menu-item-active::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-active::after, .ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-active::after, .ant-menu-light.ant-menu-horizontal >.ant-menu-item-open::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item-open::after, .ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open::after, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-open::after {
+    border: none !important;
+  }
+  .ant-menu  {
+    font-size: 16px;
+  }
+}
+.header-main {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgb(230, 230, 230);
+  .copyright {
+    line-height: 100px;
+    font-size: 16px;
+    color: rgb(122, 122, 122);
+  }
+}

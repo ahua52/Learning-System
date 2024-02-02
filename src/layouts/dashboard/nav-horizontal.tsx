@@ -55,7 +55,7 @@ export default function NavHorizontal() {
     background: colorBgElevated,
   };
   return (
-    <div className="w-screen" style={{ height: NAV_HORIZONTAL_HEIGHT }}>
+    <div className="w-screen header-menu" style={{ height: NAV_HORIZONTAL_HEIGHT }}>
       <Menu
         mode="horizontal"
         items={menuList}

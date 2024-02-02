@@ -24,7 +24,7 @@ export default function AntdConfig({ children }: Props) {
 
   const algorithm = themeMode === ThemeMode.Light ? theme.defaultAlgorithm : theme.darkAlgorithm;
   const colorPrimary = colorPrimarys[themeColorPresets];
-
+  console.log("colorPrimary", colorPrimary);
   return (
     <ConfigProvider
       locale={language.antdLocal}

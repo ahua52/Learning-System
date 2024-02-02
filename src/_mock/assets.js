@@ -70,10 +70,10 @@ const ABOUT_PERMISSION = {
 const COMPONENTS_PERMISSION = {
   id: '2271615060673773',
   parentId: '',
-  label: 'sys.menu.components',
-  name: 'Components',
+  label: 'sys.menu.classes',
+  name: 'Classes',
   type: PermissionType.CATALOGUE,
-  route: 'components',
+  route: 'classes',
   order: 3,
   children: [
     {

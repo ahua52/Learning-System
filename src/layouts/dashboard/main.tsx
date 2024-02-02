@@ -7,6 +7,7 @@ import { useResponsive } from '@/theme/hooks';
 
 import { NAV_WIDTH, NAV_COLLAPSED_WIDTH, HEADER_HEIGHT, MULTI_TABS_HEIGHT } from './config';
 import MultiTabs from './multi-tabs';
+import Footer from './footer';
 
 import { ThemeLayout } from '#/enum';
 
@@ -34,13 +35,14 @@ const Main = forwardRef<HTMLDivElement, Props>(({ offsetTop = false }, ref) => {
   }
 
   return (
-    <Content ref={ref} style={mainStyle} className="flex overflow-auto">
+    <Content ref={ref} style={mainStyle} className="main-content flex overflow-auto">
       <div
         className={`m-auto h-full w-full flex-grow sm:p-2 ${
           themeStretch ? '' : 'xl:max-w-screen-xl'
         }`}
       >
          <Outlet />
+         <Footer />
         {/* {multiTab ? <MultiTabs offsetTop={offsetTop} /> : <Outlet />} */}
       </div>
     </Content>
