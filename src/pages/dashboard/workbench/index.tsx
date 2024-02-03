@@ -1,12 +1,9 @@
-import './index.css';
-
 function Workbench() {
   return (
     <>
-      <div className='home-content'>
+      <div className='home-content width-90'>
         <h1>Education For Afghanistan</h1>
         <h1>&nbsp;</h1>
-        <p>&nbsp;</p>
         <p><span style={{color: "#26262c"}}>The “Education for Afghanistan” (EFA) initiative, particularly through the Education Bridge for Afghanistan (EBA), is providing critical online educational services for secondary-level students in Afghanistan, with a special focus on girls who are currently unable to attend school. EBA, as a non-profit organization, is established by a group of volunteer education activists in Afghanistan and around the world. This initiative is especially significant given the challenges faced by girls and women in accessing education in Afghanistan.</span></p>
         <p>&nbsp;</p>
         <h2>Learning Begins<br/>With Us</h2>

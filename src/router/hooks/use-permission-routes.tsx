@@ -46,7 +46,6 @@ function transformPermissionToMenuRoutes(
   permissions: Permission[],
   flattenedPermissions: Permission[],
 ) {
-  console.log(4444444444)
   return permissions.map((permission) => {
     const {
       route,

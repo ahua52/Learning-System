@@ -43,7 +43,7 @@ const others: AppRouteObject[] = [
     }
   },
   {
-    order: 4,
+    order: 3,
     path: 'efateam',
     element: (
       <Suspense fallback={<CircleLoading />}>
@@ -86,7 +86,7 @@ const others: AppRouteObject[] = [
     path: 'contact',
     element: (
       <Wrapper>
-        <div >contact</div>
+        <Outlet />
       </Wrapper>
     ),
     meta: {

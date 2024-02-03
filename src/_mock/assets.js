@@ -74,7 +74,7 @@ const COMPONENTS_PERMISSION = {
   name: 'Classes',
   type: PermissionType.CATALOGUE,
   route: 'classes',
-  order: 3,
+  order: 4,
   children: [
     {
       id: '2478488238255411',
@@ -157,8 +157,8 @@ const EFATEAM_PERMISSION = {
   name: 'efateam',
   type: PermissionType.MENU,
   route: 'efateam',
-  order: 4,
-  component: '/functions/clipboard/index.tsx',
+  order: 3,
+  component: '/functions/index.tsx',
 };
 const Activities_PERMISSION = {
   id: '0194818428516575',
@@ -265,7 +265,7 @@ const OTHERS_PERMISSION = [
     name: 'Apply',
     type: PermissionType.MENU,
     route: 'apply',
-    component: '/sys/others/calendar/index.tsx',
+    component: '/apply/index.tsx',
   },
   {
     id: '7728048658221587',
@@ -275,7 +275,7 @@ const OTHERS_PERMISSION = [
     type: PermissionType.MENU,  // tag new feature
     route: 'contact',
     // newFeature: true,
-    component: '/sys/others/blank.tsx',
+    component: '/contact/index.tsx',
   }
 ];
 

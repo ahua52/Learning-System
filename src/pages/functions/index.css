@@ -1,0 +1,40 @@
+.elementor-widget-container {
+  margin-bottom: 40px;
+}
+.ul-board-list {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .top-li {
+    display: flex;
+  }
+  .left-li {
+    width: 150px;
+    .ant-btn {
+      color: rgb(110, 193, 228);  
+      margin-top: 15px;
+    }
+  }
+  .right-li {
+    text-align: left;
+    padding-left: 25px;
+    .person-name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+  .text {
+    text-align: left;
+    width: 80%;
+    color: rgb(122, 122, 122);
+    color: rgb(122, 122, 122);
+  }
+  img {
+    max-width: 130px;
+  }
+}

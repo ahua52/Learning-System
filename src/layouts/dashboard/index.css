@@ -54,3 +54,63 @@
     color: rgb(122, 122, 122);
   }
 }
+.main-content {
+  font-family: Roboto, sans-serif;
+  h1 {
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.4em;
+  }
+  h2 {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin-bottom: 0.7em;
+  }
+  h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+  }
+  h6 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25em;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 1.6em;
+  }
+  .elementor-widget-text-editor {
+    color: rgb(122, 122, 122);
+  }
+  .home-content {
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+  .width-90 {
+    width: 90%;
+  }
+  .elementor-widget-container {
+    text-align: center;
+  }
+}
+.apply-form .ant-picker-outlined {
+    width: 100%;
+}
+.apply-form .ant-input-number-outlined {
+  width: 100%;
+}
