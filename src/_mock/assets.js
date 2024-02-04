@@ -86,31 +86,32 @@ const COMPONENTS_PERMISSION = {
       component: '/grade/index.tsx',
     },
     {
+      id: '20135770744679571',
+      parentId: '2271615060673773',
+      label: 'sys.menu.videocourse',
+      name: 'videocourse',
+      hide: true,
+      type: PermissionType.MENU,
+      route: 'videocourse',
+      component: '/grade/video-player.tsx',
+    },
+    {
       id: '6755238352318767',
       parentId: '2271615060673773',
       label: 'sys.menu.grade8',
       name: 'Grade8',
       type: PermissionType.MENU,
       route: 'grade8',
-      component: '/components/animate/index.tsx',
+      component: '/grade/index.tsx',
     },
     {
       id: '9992476513546805',
-      parentId: '2271615060673773',
-      label: 'sys.menu.grade8',
-      name: 'Grade9',
-      type: PermissionType.MENU,
-      route: 'grade9',
-      component: '/components/scroll/index.tsx',
-    },
-    {
-      id: '1755562695856395',
       parentId: '2271615060673773',
       label: 'sys.menu.grade9',
       name: 'Grade9',
       type: PermissionType.MENU,
       route: 'grade9',
-      component: '/components/markdown/index.tsx',
+      component: '/grade/index.tsx',
     },
     {
       id: '2122547769468069',
@@ -119,7 +120,7 @@ const COMPONENTS_PERMISSION = {
       name: 'Grade10',
       type: PermissionType.MENU,
       route: 'grade10',
-      component: '/components/editor/index.tsx',
+      component: '/grade/index.tsx',
     },
     {
       id: '2501920741714350',
@@ -128,7 +129,7 @@ const COMPONENTS_PERMISSION = {
       name: 'Grade11',
       type: PermissionType.MENU,
       route: 'grade11',
-      component: '/components/multi-language/index.tsx',
+      component: '/grade/index.tsx',
     },
     {
       id: '2013577074467956',
@@ -137,8 +138,8 @@ const COMPONENTS_PERMISSION = {
       name: 'Grade12',
       type: PermissionType.MENU,
       route: 'grade12',
-      component: '/components/upload/index.tsx',
-    },
+      component: '/grade/index.tsx',
+    }
   ],
 };
 const EFATEAM_PERMISSION = {

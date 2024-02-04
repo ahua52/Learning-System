@@ -105,6 +105,18 @@ const others: AppRouteObject[] = [
       label: 'sys.menu.contact',
       key: '/contact',
     },
+  },
+  {
+    path: 'grade/videocourse',
+    element: (
+      <Wrapper>
+        <div >videocourse</div>
+      </Wrapper>
+    ),
+    meta: {
+      label: "videocourse",
+      key: 'grade/videocourse',
+    },
   }
   
 ];
