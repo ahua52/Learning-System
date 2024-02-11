@@ -6,7 +6,7 @@ import { Iconify } from '@/components/icon';
 import { CircleLoading } from '@/components/loading';
 import { useUserPermission } from '@/store/userStore';
 import ProTag from '@/theme/antd/components/tag';
-import { flattenTrees } from '@/utils/tree';
+import { flattenTrees,flatToTree } from '@/utils/tree';
 
 import { Permission } from '#/entity';
 import { BasicStatus, PermissionType } from '#/enum';
@@ -26,12 +26,12 @@ function resolveComponent(path: string) {
 export function usePermissionRoutes() {
   const permissions = useUserPermission();
   return useMemo(() => {
-    const flattenedPermissions = flattenTrees(permissions!);
+    let treePermissions = flatToTree(permissions!);
+    const flattenedPermissions = flattenTrees(treePermissions!);
     const permissionRoutes = transformPermissionToMenuRoutes(
-      permissions || [],
+      treePermissions || [],
       flattenedPermissions,
     );
-    
     return [...permissionRoutes];
   }, [permissions]);
 }
