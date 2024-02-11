@@ -57,7 +57,7 @@ function transformPermissionToMenuRoutes(
       frameSrc,
       newFeature,
       component,
-      parentId,
+      parent_id,
       children = [],
     } = permission;
 
@@ -83,7 +83,7 @@ function transformPermissionToMenuRoutes(
 
     if (type === PermissionType.CATALOGUE) {
       appRoute.meta!.hideTab = true;
-      if (!parentId) {
+      if (!parent_id) {
         appRoute.element = (
           <Suspense fallback={<CircleLoading />}>
             <Outlet />
@@ -120,8 +120,8 @@ function transformPermissionToMenuRoutes(
 function getCompleteRoute(permission: Permission, flattenedPermissions: Permission[], route = '') {
   const currentRoute = route ? `/${permission.route}${route}` : `/${permission.route}`;
 
-  if (permission.parentId) {
-    const parentPermission = flattenedPermissions.find((p) => p.id === permission.parentId)!;
+  if (permission.parent_id) {
+    const parentPermission = flattenedPermissions.find((p) => p.id === permission.parent_id)!;
     return getCompleteRoute(parentPermission, flattenedPermissions, currentRoute);
   }
 

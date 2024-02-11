@@ -16,6 +16,7 @@ import { BasicStatus, PermissionType } from '#/enum';
 const defaultPermissionValue: Permission = {
   id: '',
   parentId: '',
+  parent_id: '',
   name: '',
   label: '',
   route: '',
