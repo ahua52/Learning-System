@@ -1,0 +1,48 @@
+create database AHUALMS;
+
+CREATE TABLE userrole (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    label VARCHAR(50) NOT NULL,
+    permission VARCHAR(50),
+    sort INT(4),
+    description VARCHAR(500),
+    status BOOLEAN DEFAULT TRUE
+);
+// ALTER TABLE userrole ADD COLUMN sort INT(4);       // add a new field to the table
+// ALTER TABLE userrole modify COLUMN sort INT(4);   // ALTER field type
+// ALTER TABLE userrole drop column email;           // drop column
+
+INSERT INTO userrole (id, name, label,permission, sort, description, status)
+VALUES (9931665660771476, "Test", "test", "1,2,3", 2,"",true)
+VALUES (4281707933534332, "Admin", "admin", "1,2,3,4,5,6,7", 1,"",true);
+
+CREATE TABLE user (
+    id VARCHAR(50) PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    avatar VARCHAR(100),
+    createdAt TIMESTAMP,
+    updatedAt TIMESTAMP,
+    password VARCHAR(50),
+    role VARCHAR(50),
+    permissions VARCHAR(50)
+);
+
+INSERT INTO user (id, username, email,avatar, createdAt, updatedAt, password, roleId, permissions)
+VALUES ("1f7df3bc-03d2-46be-bdd8-7ec8b38f8966","admin@gmail.com",
+"Camden_OConner10@yahoo.com",
+"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/19.jpg",
+1707141656,1707141658,"demo1234","4281707933534332","1,2,3,4,5,6,7");
+VALUES (
+  "5975c50e-adfe-4c7b-bd6c-c2bc9c3df32e", 
+  "test@gmail.com", 
+  "Oscar_Kovacek53@gmail.com",
+  "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1084.jpg",
+  1707141656,
+  1707141658,
+  "demo1234",
+  "9931665660771476",
+  "1,2,3"
+  );
+    

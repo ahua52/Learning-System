@@ -1,12 +1,12 @@
-import { Alert, Button, Checkbox, Col, Divider, Form, Input, Row } from 'antd';
+import { Button, Checkbox, Col, Divider, Form, Input, Row } from 'antd';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AiFillGithub, AiFillGoogleCircle, AiFillWechat } from 'react-icons/ai';
 
-import { DEFAULT_USER, TEST_USER } from '@/_mock/assets';
+// import { DEFAULT_USER, TEST_USER } from '@/_mock/assets';
 import { SignInReq } from '@/api/services/userService';
 import { useSignIn } from '@/store/userStore';
-import ProTag from '@/theme/antd/components/tag';
+// import ProTag from '@/theme/antd/components/tag';
 import { useThemeToken } from '@/theme/hooks';
 
 import { LoginStateEnum, useLoginStateContext } from './providers/LoginStateProvider';
@@ -35,14 +35,17 @@ function LoginForm() {
       <Form
         name="login"
         size="large"
+        // initialValues={{  admin@gmail.com test@gmail.com demo1234
+        //   remember: true,
+        //   username: DEFAULT_USER.username,
+        //   password: DEFAULT_USER.password,
+        // }}
         initialValues={{
           remember: true,
-          username: DEFAULT_USER.username,
-          password: DEFAULT_USER.password,
         }}
         onFinish={handleFinish}
       >
-        <div className="mb-4 flex flex-col">
+        {/* <div className="mb-4 flex flex-col">
           <Alert
             type="info"
             description={
@@ -71,7 +74,7 @@ function LoginForm() {
             }
             showIcon
           />
-        </div>
+        </div> */}
 
         <Form.Item
           name="username"

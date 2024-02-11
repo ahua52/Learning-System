@@ -2,47 +2,6 @@ import { faker } from '@faker-js/faker';
 
 import { BasicStatus, PermissionType } from '#/enum';
 
-/**
- * Organization data mock
- */
-export const ORG_LIST = [
-  {
-    id: '1',
-    name: 'East China Branch',
-    status: 'enable',
-    desc: faker.lorem.words(),
-    order: 1,
-    children: [
-      { id: '1-1', name: 'R&D Department', status: 'disable', desc: '', order: 1 },
-      { id: '1-2', name: 'Marketing Department', status: 'enable', desc: '', order: 2 },
-      { id: '1-3', name: 'Finance Department', status: 'enable', desc: '', order: 3 },
-    ],
-  },
-  {
-    id: '2',
-    name: 'South China Branch',
-    status: 'enable',
-    desc: faker.lorem.words(),
-    order: 2,
-    children: [
-      { id: '2-1', name: 'R&D Department', status: 'disable', desc: '', order: 1 },
-      { id: '2-2', name: 'Marketing Department', status: 'enable', desc: '', order: 2 },
-      { id: '2-3', name: 'Finance Department', status: 'enable', desc: '', order: 3 },
-    ],
-  },
-  {
-    id: '3',
-    name: 'Northwest Branch',
-    status: 'enable',
-    desc: faker.lorem.words(),
-    order: 3,
-    children: [
-      { id: '3-1', name: 'R&D Department', status: 'disable', desc: '', order: 1 },
-      { id: '3-2', name: 'Marketing Department', status: 'enable', desc: '', order: 2 },
-      { id: '3-3', name: 'Finance Department', status: 'enable', desc: '', order: 3 },
-    ],
-  },
-];
 
 /**
  * User permission mock
@@ -61,7 +20,7 @@ const ABOUT_PERMISSION = {
   id: '0901673425580518',
   parentId: '',
   label: 'sys.menu.about',
-  name: 'Management',
+  name: 'About',
   type: PermissionType.MENU,
   route: 'about',
   component: '/management/index.tsx',
@@ -272,17 +231,18 @@ const OTHERS_PERMISSION = [
 ];
 
 export const PERMISSION_LIST = [
-  HOME_PERMISSION,
-  ABOUT_PERMISSION,
-  COMPONENTS_PERMISSION,
-  EFATEAM_PERMISSION,
-  Activities_PERMISSION,
-  MANAGEMENT_PERMISSION,
-  ...OTHERS_PERMISSION,
+  HOME_PERMISSION, //1
+  ABOUT_PERMISSION, //2
+  COMPONENTS_PERMISSION, //3
+  EFATEAM_PERMISSION, //4
+  Activities_PERMISSION, //5
+  MANAGEMENT_PERMISSION, //6
+  ...OTHERS_PERMISSION, //7
 ];
 
+
 /**
- * User role mock
+ * User role mock  加入数据库
  */
 const ADMIN_ROLE = {
   id: '4281707933534332',
@@ -318,6 +278,7 @@ export const DEFAULT_USER = {
   role: ADMIN_ROLE,
   permissions: ADMIN_ROLE.permission,
 };
+
 export const TEST_USER = {
   id: faker.string.uuid(),
   username: 'test@gmail.com',

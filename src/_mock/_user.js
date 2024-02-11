@@ -7,7 +7,7 @@ import { USER_LIST } from './assets';
 
 const signIn = rest.post(`/api${UserApi.SignIn}`, async (req, res, ctx) => {
   const { username, password } = await req.json();
-
+  console.log(1111, username, password);
   const user = USER_LIST.find((item) => item.username === username);
 
   if (!user || user.password !== password) {
@@ -47,4 +47,5 @@ const userList = rest.get('/api/user', (req, res, ctx) => {
   );
 });
 
-export default [signIn, userList];
+// export default [signIn, userList];
+export default []
