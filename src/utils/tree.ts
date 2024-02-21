@@ -31,7 +31,7 @@ export function flatToTree(flatArray: Permission[] = []): Permission[] {
   for(let key in map) {
       let node = map[key]
       if (node.parent_id !== "") {
-          const parent = map[node.parent_id];
+          const parent = map[node.parent_id!];
           if (parent) {
               parent.children = parent.children || [];
               parent.children.push(map[node.id]);

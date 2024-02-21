@@ -104,7 +104,6 @@ export default function Nav(props: Props) {
     }
     setCollapsed(!collapsed);
   };
-
   return (
     <div
       className="flex h-full flex-col"
@@ -115,9 +114,9 @@ export default function Nav(props: Props) {
     >
       <div className="relative flex h-20 items-center justify-center py-4">
         {themeLayout === ThemeLayout.Mini ? (
-          <Logo className="text-lg" />
+          <Logo/>
         ) : (
-          <Logo className="text-4xl" />
+          <Logo/>
         )}
         <button
           onClick={toggleCollapsed}

@@ -2,7 +2,7 @@ import { Drawer } from 'antd';
 import Color from 'color';
 import { CSSProperties, useState } from 'react';
 
-import { IconButton, Iconify, SvgIcon } from '@/components/icon';
+import { IconButton, SvgIcon } from '@/components/icon';
 // import LocalePicker from '@/components/locale-picker';
 import Logo from '@/components/logo';
 import { useSettings } from '@/store/settingStore';
@@ -11,7 +11,7 @@ import { useResponsive, useThemeToken } from '@/theme/hooks';
 import AccountDropdown from '../_common/account-dropdown';
 // import BreadCrumb from '../_common/bread-crumb';
 // import NoticeButton from '../_common/notice';
-import SearchBar from '../_common/search-bar';
+// import SearchBar from '../_common/search-bar';
 import HeaderSearch from './headerSearch';
 // import SettingButton from '../_common/setting-button';
 import NavHorizontal from './nav-horizontal';
@@ -27,7 +27,7 @@ type Props = {
 };
 export default function Header({ className = '', offsetTop = false }: Props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const { themeLayout, breadCrumb } = useSettings();
+  const { themeLayout } = useSettings();
   const { colorBgElevated, colorBorder } = useThemeToken();
   const { screenMap } = useResponsive();
 
@@ -68,7 +68,7 @@ export default function Header({ className = '', offsetTop = false }: Props) {
                 <SvgIcon icon="ic-menu" size="24" />
               </IconButton>
             ) : (
-              <Logo className="mr-2 text-xl" />
+              <Logo />
             )}
             {/* <div className="hidden md:block">{breadCrumb ? <BreadCrumb /> : null}</div> */}
           </div>

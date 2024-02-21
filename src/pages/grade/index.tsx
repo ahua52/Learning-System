@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { useLocation }  from 'react-router-dom'
 import { Flex,Rate,Select,Button,Tabs,Collapse,List,Avatar,Progress } from "antd"
 import { NavLink } from 'react-router-dom';
@@ -78,7 +78,7 @@ const handleChange = (value: string) => {
 };
 
 export default function Grade() {
-  const [currentTabKey] = useState(0)
+  // const [currentTabKey] = useState(0)
   const location = useLocation();
   const { pathname } = location;
   console.log(pathname)
@@ -169,6 +169,7 @@ function getImgUrl(name: string) {
   return new URL(`../../assets/images/course/physic/${name}`, import.meta.url).href;
 }
 const onTabChange = (key: string) => {
+  console.log(key);
 };
 function renderCollapseContent(couseVideoList:viewListType[]) {
   return (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Tabs } from 'antd';
 import ReactPlayer from 'react-player'
-import { CheckCircleOutlined,LeftCircleOutlined } from "@ant-design/icons"
+import { CheckCircleOutlined } from "@ant-design/icons"
 import {Button} from 'antd'
 import "./index.css"
 
@@ -65,6 +65,7 @@ export default function videoPlayer() {
   )
 }
 function renderVideoContent(item:viewListType) {
+  console.log(item);
   return (
     // <div>test</div>
     <ReactPlayer url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />

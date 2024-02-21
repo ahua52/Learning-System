@@ -6,7 +6,7 @@ import { useSettings } from '@/store/settingStore';
 import { useResponsive } from '@/theme/hooks';
 
 import { NAV_WIDTH, NAV_COLLAPSED_WIDTH, HEADER_HEIGHT, MULTI_TABS_HEIGHT } from './config';
-import MultiTabs from './multi-tabs';
+// import MultiTabs from './multi-tabs';
 import Footer from './footer';
 
 import { ThemeLayout } from '#/enum';
@@ -33,6 +33,8 @@ const Main = forwardRef<HTMLDivElement, Props>(({ offsetTop = false }, ref) => {
   } else {
     mainStyle.width = '100vw';
   }
+
+  console.log(offsetTop)
 
   return (
     <Content ref={ref} style={mainStyle} className="main-content flex overflow-auto">
